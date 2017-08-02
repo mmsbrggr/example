@@ -9,6 +9,10 @@ module.exports = {
 					test: /\.jsx?$/,
 					exclude: /node_modules/,
 					loader: 'babel-loader',
+                    query: {
+                        presets: ['react', 'es2015'],
+                        plugins: ['transform-decorators-legacy', 'transform-class-properties'],
+                    },
 				},
 				{
 					test: /\.css$/,
